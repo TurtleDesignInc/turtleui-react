@@ -1,66 +1,141 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  /* App Base */
+
+  --g-deg: 225deg;
+
+  /* Primary Colors */
+
+  --black: 0, 0%, 3%;
+  --white: 0, 0%, 100%;
+  --tan: 42, 100%, 98%;
+
+  --grey: 0, 0%, 44%;
+  --grey-light: 0, 0%, 85%;
+  --grey-lighter: 0, 0%, 95%;
+
+  --turtle-blue: 228, 81%, 61%;
+  --turtle-blue-dark: 228, 58%, 45%;
+  --turtle-blue-light: 228, 82%, 86%;
+
+  /* Secondary Colors */
+
+  --red: 0, 76%, 46%;
+  --red-light: 0, 69%, 94%;
+  --red-gradient: linear-gradient(
+    var(--g-deg),
+    hsl(var(--white)) 0%,
+    hsl(var(--red-light)) 100%
+  );
+
+  --green: 130, 48%, 33%;
+  --green-light: 129, 37%, 93%;
+  --green-gradient: linear-gradient(
+    var(--g-deg),
+    hsl(var(--white)) 0%,
+    hsl(var(--green-light)) 100%
+  );
+
+  --yellow: 36, 93%, 30%;
+  --yellow-light: 36, 87%, 88%;
+  --yellow-gradient: linear-gradient(
+    var(--g-deg),
+    hsl(var(--white)) 0%,
+    hsl(var(--yellow-light)) 100%
+  );
+
+  --purple: 266, 79%, 48%;
+  --purple-light: 266, 79%, 93%;
+  --purple-gradient: linear-gradient(
+    var(--g-deg),
+    hsl(var(--white)) 0%,
+    hsl(var(--purple-light)) 100%
+  );
+
+  --teal: 184, 83%, 28%;
+  --teal-light: 184, 79%, 93%;
+  --teal-gradient: linear-gradient(
+    var(--g-deg),
+    hsl(var(--white)) 0%,
+    hsl(var(--teal-light)) 100%
+  );
+
+  /* Custom Card Colors */
+
+  --custom-blue: 228, 82%, 76%;
+  --custom-yellow: 35, 90%, 81%;
+  --custom-teal: 184, 41%, 70%;
+
+  /* Shadcn */
+
+  --background: var(--white);
+  --foreground: var(--black);
+
+  --muted: 210 40% 96.1%;
+  --muted-foreground: 215.4 16.3% 46.9%;
+
+  --popover: 0 0% 100%;
+  --popover-foreground: 222.2 84% 4.9%;
+
+  --card: 0 0% 100%;
+  --card-foreground: 222.2 84% 4.9%;
+
+  --border: var(--black);
+  --input: var(--black);
+
+  --primary: 222.2 47.4% 11.2%;
+  --primary-foreground: 210 40% 98%;
+
+  --secondary: 210 40% 96.1%;
+  --secondary-foreground: 222.2 47.4% 11.2%;
+
+  --accent: var(--grey-lighter);
+  --accent-foreground: 222.2 47.4% 11.2%;
+
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 210 40% 98%;
+
+  --ring: var(--turtle-blue-light);
+
+  --radius: 0.5rem;
+}
+
 @layer base {
-  :root {
-    --background: 0 0% 100%;
-    --foreground: 0 0% 3.9%;
-    --card: 0 0% 100%;
-    --card-foreground: 0 0% 3.9%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 3.9%;
-    --primary: 0 0% 9%;
-    --primary-foreground: 0 0% 98%;
-    --secondary: 0 0% 96.1%;
-    --secondary-foreground: 0 0% 9%;
-    --muted: 0 0% 96.1%;
-    --muted-foreground: 0 0% 45.1%;
-    --accent: 0 0% 96.1%;
-    --accent-foreground: 0 0% 9%;
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 89.8%;
-    --input: 0 0% 89.8%;
-    --ring: 0 0% 3.9%;
-    --chart-1: 12 76% 61%;
-    --chart-2: 173 58% 39%;
-    --chart-3: 197 37% 24%;
-    --chart-4: 43 74% 66%;
-    --chart-5: 27 87% 67%;
-    --radius: 0.5rem
+  html {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
   }
-  .dark {
-    --background: 0 0% 3.9%;
-    --foreground: 0 0% 98%;
-    --card: 0 0% 3.9%;
-    --card-foreground: 0 0% 98%;
-    --popover: 0 0% 3.9%;
-    --popover-foreground: 0 0% 98%;
-    --primary: 0 0% 98%;
-    --primary-foreground: 0 0% 9%;
-    --secondary: 0 0% 14.9%;
-    --secondary-foreground: 0 0% 98%;
-    --muted: 0 0% 14.9%;
-    --muted-foreground: 0 0% 63.9%;
-    --accent: 0 0% 14.9%;
-    --accent-foreground: 0 0% 98%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 14.9%;
-    --input: 0 0% 14.9%;
-    --ring: 0 0% 83.1%;
-    --chart-1: 220 70% 50%;
-    --chart-2: 160 60% 45%;
-    --chart-3: 30 80% 55%;
-    --chart-4: 280 65% 60%;
-    --chart-5: 340 75% 55%
+
+  html,
+  body {
+    color: hsl(var(--foreground));
+    background: hsl(var(--background));
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply grow leading-regular;
   }
 }
-@layer base {
+
+@layer components {
   * {
-    @apply border-border;
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2;
   }
-  body {
-    @apply bg-background text-foreground;
+
+  .container {
+    @apply max-w-full md:max-w-full lg:max-w-full;
   }
+
+  .link {
+    @apply text-turtle-blue underline underline-offset-2 hover:text-turtle-blue-dark active:text-black;
+  }
+
+  /* .card:-webkit-scrollbar: {
+    width: 0;
+  } */
 }
