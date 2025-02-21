@@ -1,0 +1,73 @@
+import { Meta, Typeset } from "@storybook/blocks";
+
+<Meta title="Foundation/Typography" />
+
+export const heading = {
+  type: {
+    primary: "FFF Acid Grotesk, sans-serif",
+  },
+  weight: {
+    regular: "400",
+  },
+  size: {
+    h1: 100,
+    h2: 64,
+    h3: 48,
+    h4: 40,
+    h5: 32,
+    h6: 24,
+  },
+};
+export const body = {
+  type: {
+    primary: "Inter, sans-serif",
+  },
+  weight: {
+    regular: "400",
+    bold: "700",
+  },
+  size: {
+    p1: 12,
+    p2: 16,
+    p3: 20,
+  },
+};
+
+export const HeadingText = "Your network";
+
+export const BodyText = "The time is now for it to be okay to be great.";
+
+# Typography
+
+## Heading
+
+**Font:** FFF Acid Grotesk
+
+**Weights:** 400(regular)
+
+<Typeset
+  fontSizes={[
+    Number(heading.size.h1),
+    Number(heading.size.h2),
+    Number(heading.size.h3),
+    Number(heading.size.h4),
+    Number(heading.size.h5),
+    Number(heading.size.h6),
+  ]}
+  fontWeight={heading.weight.regular}
+  sampleText={HeadingText}
+  fontFamily={heading.type.primary}
+/>
+
+## Body
+
+**Font:** Inter
+
+**Weights:** 400(regular), 700(bold)
+
+<Typeset
+  fontSizes={[Number(body.size.p1), Number(body.size.p2), Number(body.size.p3)]}
+  fontWeight={body.weight.regular}
+  sampleText={BodyText}
+  fontFamily={body.type.primary}
+/>
