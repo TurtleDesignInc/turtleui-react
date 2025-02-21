@@ -1,74 +1,178 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "FFF Acid Grotesk";
+  src: local(FFF Acid Grotesk), local(FFF-AcidGrotesk-Normal),
+    url("./assets/fonts/fff-acidgrotesk-normal.woff") format("woff"),
+    url("./assets/fonts/fff-acidgrotesk-normal.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
-  /* App Base */
+  /* PRIMITIVES */
+  --color-neutrals-0: #ffffff;
+  --color-neutrals-100: #f1f5f9;
+  --color-neutrals-200: #d9d9d9;
+  --color-neutrals-500: #64748b;
+  --color-neutrals-900: #0f0d16;
+  --color-neutrals-1000: #080808;
+  --color-beige-100: #fff9ec;
+  --color-beige-200: #eddfc0;
+  --color-green-100: #e7f4e9;
+  --color-green-500: #2c7d39;
+  --color-teal-100: #dff9fb;
+  --color-teal-500: #0c7b83;
+  --color-red-100: #fae5e5;
+  --color-red-500: #ce1c1c;
+  --color-brown-100: #fbe6c6;
+  --color-brown-500: #945b05;
+  --color-purple-100: #ebdffb;
+  --color-purple-500: #803ced;
+  --color-blue-500: #4b6dff;
+  --color-blue-600: #304bb5;
+  --values-4: 4px;
+  --values-4-rem: 0.25rem;
+  --values-8: 8px;
+  --values-8-rem: 0.5rem;
+  --values-12: 12px;
+  --values-12-rem: 0.75rem;
+  --values-16: 16px;
+  --values-16-rem: 1rem;
+  --values-20: 20px;
+  --values-20-rem: 1.25rem;
+  --values-24: 24px;
+  --values-24-rem: 1.5rem;
+  --values-28: 28px;
+  --values-28-rem: 1.75rem;
+  --values-32: 32px;
+  --values-32-rem: 2rem;
+  --values-36: 36px;
+  --values-36-rem: 2.25rem;
+  --values-40: 40px;
+  --values-40-rem: 2.5rem;
+  --values-48: 48px;
+  --values-48-rem: 3rem;
+  --values-64: 64px;
+  --values-64-rem: 4rem;
+  --values-100: 100;
+  --values-120: 120px;
+  --values-120-rem: 7.5rem;
+  --values-150: 150px;
+  --values-150-rem: 9.375rem;
+  --values-56: 56px;
+  --values-56-rem: 3.5rem;
+  --values-10: 10px;
+  --values-10-rem: 0.625rem;
+  --values-14: 14px;
+  --values-14-rem: 0.875rem;
+  --values-18: 18px;
+  --values-18-rem: 1.125rem;
+  --values-6: 6px;
+  --values-6-rem: 0.375rem;
+  --values-2: 2px;
+  --values-2-rem: 0.125rem;
+  --values-72: 72px;
+  --values-72-rem: 4.5rem;
+  --values-78: 78px;
+  --values-78-rem: 4.875rem;
 
-  --g-deg: 225deg;
+  /* TYPOGRAPHY */
+  --body-desktop: var(--font-family-inter);
+  --body-mobile: var(--font-family-inter);
+  --headers-desktop: var(--font-family-acid-grotesk);
+  --headers-mobile: var(--font-family-acid-grotesk);
+  --font-family-inter: "Inter", sans-serif;
+  --font-family-acid-grotesk: "FFF Acid Grotesk", sans-serif;
+  --font-weight-bold-desktop: "Bold";
+  --font-weight-normal-desktop: "Normal";
+  --font-weight-regular-desktop: "Regular";
+  --font-size-caption-desktop: var(--values-12);
+  --font-size-caption-mobile: var(--values-10);
+  --font-size-body-small-desktop: var(--values-16);
+  --font-size-body-small-mobile: var(--values-14);
+  --font-size-h6-desktop: var(--values-24);
+  --font-size-h6-mobile: var(--values-24);
+  --font-size-h5-desktop: var(--values-32);
+  --font-size-h5-mobile: var(--values-32);
+  --font-size-h1-desktop: var(--values-100);
+  --font-size-h1-mobile: var(--values-64);
+  --font-size-h4-desktop: var(--values-40);
+  --font-size-h4-mobile: var(--values-40);
+  --font-size-body-normal-desktop: var(--values-20);
+  --font-size-body-normal-mobile: var(--values-18);
+  --font-size-h3-desktop: var(--values-48);
+  --font-size-h3-mobile: var(--values-48);
+  --font-size-h2-desktop: var(--values-64);
+  --font-size-h2-mobile: var(--values-56);
+  --line-height-body-small-desktop: var(--values-28);
+  --line-height-body-small-mobile: var(--values-24);
+  --line-height-body-normal-desktop: var(--values-32);
+  --line-height-body-normal-mobile: var(--values-28);
+  --line-height-h3-desktop: var(--values-56);
+  --line-height-h3-mobile: var(--values-56);
+  --line-height-h5-desktop: var(--values-40);
+  --line-height-h5-mobile: var(--values-40);
+  --line-height-h4-desktop: var(--values-48);
+  --line-height-h4-mobile: var(--values-48);
+  --line-height-h6-desktop: var(--values-32);
+  --line-height-h6-mobile: var(--values-32);
+  --line-height-h2-desktop: var(--values-72);
+  --line-height-h2-mobile: var(--values-64);
+  --line-height-caption-desktop: var(--values-24);
+  --line-height-caption-mobile: var(--values-20);
+  --line-height-h1-desktop: var(--values-100);
+  --line-height-h1-mobile: var(--values-64);
+  --width-desktop: 1280px;
+  --width-rem-desktop: 80rem;
+  --width-mobile: 480px;
+  --width-rem-mobile: 30rem;
 
-  /* Primary Colors */
+  /* SEMANTICS */
+  --button-primary-default-bg-fill: var(--color-blue-500);
+  --button-primary-hover-bg-fill: var(--color-blue-600);
+  --button-primary-pressed-bg-fill: var(--color-blue-600);
+  --button-primary-disabled-bg-fill: var(--color-neutrals-200);
+  --button-primary-text: var(--color-neutrals-0);
+  --button-disabled-text: var(--color-neutrals-500);
+  --button-padding-horizontal: var(--values-24);
+  --button-padding-vertical: var(--values-16);
+  --button-corner-radius: var(--values-12);
+  --button-spacing: var(--values-12);
+  --button-secondary-default-bg-fill: var(--color-neutrals-1000);
+  --button-secondary-hover-bg-fill: var(--color-neutrals-900);
+  --button-secondary-pressed-bg-fill: var(--color-neutrals-900);
+  --button-secondary-disabled-bg-fill: var(--color-neutrals-200);
+  --button-secondary-text: var(--color-neutrals-0);
+  --button-primary-icon: var(--color-neutrals-0);
+}
 
-  --black: 0, 0%, 3%;
-  --white: 0, 0%, 100%;
-  --tan: 42, 100%, 98%;
+.dark {
+  /* SEMANTICS */
+  --button-primary-default-bg-fill: var(--color-blue-500);
+  --button-primary-hover-bg-fill: var(--color-blue-600);
+  --button-primary-pressed-bg-fill: var(--color-blue-600);
+  --button-primary-disabled-bg-fill: var(--color-neutrals-200);
+  --button-primary-text: var(--color-neutrals-0);
+  --button-disabled-text: var(--color-neutrals-500);
+  --button-padding-horizontal: var(--values-24);
+  --button-padding-vertical: var(--values-16);
+  --button-corner-radius: var(--values-12);
+  --button-spacing: var(--values-12);
+  --button-secondary-default-bg-fill: var(--color-neutrals-0);
+  --button-secondary-hover-bg-fill: var(--color-neutrals-100);
+  --button-secondary-pressed-bg-fill: var(--color-neutrals-100);
+  --button-secondary-disabled-bg-fill: var(--color-neutrals-200);
+  --button-secondary-text: var(--color-neutrals-1000);
+  --button-primary-icon: var(--color-neutrals-0);
+}
 
-  --grey: 0, 0%, 44%;
-  --grey-light: 0, 0%, 85%;
-  --grey-lighter: 0, 0%, 95%;
-
-  --turtle-blue: 228, 81%, 61%;
-  --turtle-blue-dark: 228, 58%, 45%;
-  --turtle-blue-light: 228, 82%, 86%;
-
-  /* Secondary Colors */
-
-  --red: 0, 76%, 46%;
-  --red-light: 0, 69%, 94%;
-  --red-gradient: linear-gradient(
-    var(--g-deg),
-    hsl(var(--white)) 0%,
-    hsl(var(--red-light)) 100%
-  );
-
-  --green: 130, 48%, 33%;
-  --green-light: 129, 37%, 93%;
-  --green-gradient: linear-gradient(
-    var(--g-deg),
-    hsl(var(--white)) 0%,
-    hsl(var(--green-light)) 100%
-  );
-
-  --yellow: 36, 93%, 30%;
-  --yellow-light: 36, 87%, 88%;
-  --yellow-gradient: linear-gradient(
-    var(--g-deg),
-    hsl(var(--white)) 0%,
-    hsl(var(--yellow-light)) 100%
-  );
-
-  --purple: 266, 79%, 48%;
-  --purple-light: 266, 79%, 93%;
-  --purple-gradient: linear-gradient(
-    var(--g-deg),
-    hsl(var(--white)) 0%,
-    hsl(var(--purple-light)) 100%
-  );
-
-  --teal: 184, 83%, 28%;
-  --teal-light: 184, 79%, 93%;
-  --teal-gradient: linear-gradient(
-    var(--g-deg),
-    hsl(var(--white)) 0%,
-    hsl(var(--teal-light)) 100%
-  );
-
-  /* Custom Card Colors */
-
-  --custom-blue: 228, 82%, 76%;
-  --custom-yellow: 35, 90%, 81%;
-  --custom-teal: 184, 41%, 70%;
-
+:root {
   /* Shadcn */
 
   --background: var(--white);
