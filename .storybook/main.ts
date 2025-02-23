@@ -8,7 +8,8 @@ const config: StorybookConfig = {
     "@storybook/addon-essentials",
     "@chromatic-com/storybook",
     "@storybook/addon-interactions",
-    "@storybook/addon-mdx-gfm"
+    "@storybook/addon-mdx-gfm",
+    "@storybook/addon-designs",
   ],
 
   framework: {
@@ -16,6 +17,6 @@ const config: StorybookConfig = {
     options: {},
   },
 
-  docs: {}
+  docs: {},
 };
 export default config;
