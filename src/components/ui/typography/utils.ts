@@ -3,7 +3,7 @@ import { cva } from "class-variance-authority";
 export const headingTextVariants = cva("font-heading", {
   variants: {
     level: {
-      h1: "text-100 leading-64 xl:text-100 xl:leading-100",
+      h1: "text-64 leading-64 xl:text-100 xl:leading-100",
       h2: "text-56 leading-64 xl:text-64 xl:leading-72",
       h3: "text-48 leading-56",
       h4: "text-40 leading-48",
