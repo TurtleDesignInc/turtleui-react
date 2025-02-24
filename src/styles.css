@@ -204,6 +204,7 @@
 }
 
 .sb-main-centered,
-.sb-show-main {
+.sb-show-main,
+.docs-story {
   @apply bg-background text-foreground;
 }

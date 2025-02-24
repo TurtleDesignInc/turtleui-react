@@ -28,7 +28,9 @@
       "@/assets/*": ["./src/assets/*"],
       "@/components/*": ["./src/components/*"],
       "@/stories/*": ["./src/stories/*"]
-    }
+    },
+
+    "types": ["vite-plugin-svgr/client"]
   },
   "include": ["src"]
 }
