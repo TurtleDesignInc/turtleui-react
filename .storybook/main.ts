@@ -10,6 +10,9 @@ const config: StorybookConfig = {
     "@storybook/addon-interactions",
     "@storybook/addon-mdx-gfm",
     "@storybook/addon-designs",
+    "@storybook/addon-a11y",
+    "@storybook/addon-viewport",
+    "@storybook/addon-themes",
   ],
 
   framework: {
