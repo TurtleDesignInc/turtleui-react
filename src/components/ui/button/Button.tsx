@@ -3,18 +3,17 @@ import { type VariantProps } from "class-variance-authority";
 
 import { cn } from "@/utils/shadcn";
 
-import SpinnerSvg from "@/assets/icons/spinner.svg";
-import { ButtonHTMLAttributes, forwardRef } from "react";
+import { ButtonHTMLAttributes, forwardRef, ReactElement } from "react";
 import { buttonVariants } from "./utils";
 import { Icon } from "../icon";
+import { SpinnerIcon } from "../icons/SpinnerIcon";
 
 export interface ButtonProps
   extends ButtonHTMLAttributes<HTMLButtonElement>,
     VariantProps<typeof buttonVariants> {
   asChild?: boolean;
-  loading?: boolean;
-  leftIcon?: any;
-  rightIcon?: any;
+  leftIcon?: () => ReactElement;
+  rightIcon?: () => ReactElement;
   animateIcon?: boolean;
 }
 
@@ -23,8 +22,6 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     {
       className,
       variant,
-      buttonColor,
-      spacing,
       asChild = false,
       loading = false,
       leftIcon,
@@ -37,16 +34,15 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     ref
   ) => {
     const Comp = asChild ? Slot : "button";
-    const useCustomIconClassName = variant !== "link" && spacing === "default";
+    const useCustomIconClassName = variant !== "link";
 
     return (
       <Comp
         className={cn(
-          buttonVariants({ variant, buttonColor, spacing }),
+          buttonVariants({ variant, loading }),
           {
-            "!pl-5": leftIcon && useCustomIconClassName,
-            "!pr-5": rightIcon && useCustomIconClassName,
-            "animate-pulse duration-1000": loading,
+            "!pl-button": leftIcon && useCustomIconClassName,
+            "!pr-button": rightIcon && useCustomIconClassName,
             "disabled:opacity-50 disabled:saturate-0 disabled:cursor-not-allowed":
               !loading,
           },
@@ -58,7 +54,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       >
         <>
           {loading ? (
-            <Icon as={SpinnerSvg} className="animate-spin" />
+            <Icon as={SpinnerIcon} className="animate-spin" />
           ) : (
             <>
               {leftIcon ? <Icon as={leftIcon} /> : null}

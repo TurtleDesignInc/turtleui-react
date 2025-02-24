@@ -41,17 +41,17 @@ const viewports: ViewportMap = {
   },
   desktopmid: {
     name: "Desktop Mid",
-    styles: { height: "1366px", width: "768px" },
+    styles: { height: "768px", width: "1366px" },
     type: "desktop",
   },
   desktophigh: {
     name: "Desktop High",
-    styles: { height: "1440px", width: "900px" },
+    styles: { height: "900px", width: "1440px" },
     type: "desktop",
   },
   desktopultra: {
     name: "Desktop Ultra",
-    styles: { height: "1920px", width: "1080px" },
+    styles: { height: "1080px", width: "1920px" },
     type: "desktop",
   },
 };
@@ -70,7 +70,7 @@ const preview: Preview = {
     layout: "centered",
     viewport: {
       viewports: viewports,
-      defaultViewport: "desktopmid",
+      defaultViewport: "responsive",
     },
   },
   decorators: [
