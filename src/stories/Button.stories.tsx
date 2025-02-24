@@ -67,7 +67,7 @@ export const Primary: Story = {
   parameters: {
     design: {
       type: "figma",
-      url: "https://www.figma.com/design/ehv3QAHu3JKCcAC46wSh8z/Foundation-File?node-id=55-245&t=zXV3M5qRVXPj8wvQ-4",
+      url: "https://www.figma.com/design/ehv3QAHu3JKCcAC46wSh8z/Foundation-File?node-id=55-244&t=zXV3M5qRVXPj8wvQ-4",
     },
   },
 };
@@ -120,7 +120,7 @@ export const Disabled: Story = {
   parameters: {
     design: {
       type: "figma",
-      url: "https://www.figma.com/design/ehv3QAHu3JKCcAC46wSh8z/Foundation-File?node-id=55-245&t=zXV3M5qRVXPj8wvQ-4",
+      url: "https://www.figma.com/design/ehv3QAHu3JKCcAC46wSh8z/Foundation-File?node-id=55-243&t=zXV3M5qRVXPj8wvQ-4",
     },
   },
 };
@@ -134,7 +134,7 @@ export const Loading: Story = {
   parameters: {
     design: {
       type: "figma",
-      url: "https://www.figma.com/design/ehv3QAHu3JKCcAC46wSh8z/Foundation-File?node-id=55-245&t=zXV3M5qRVXPj8wvQ-4",
+      url: "https://www.figma.com/design/ehv3QAHu3JKCcAC46wSh8z/Foundation-File?node-id=55-242&t=zXV3M5qRVXPj8wvQ-4",
     },
   },
 };

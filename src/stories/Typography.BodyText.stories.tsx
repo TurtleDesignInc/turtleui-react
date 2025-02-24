@@ -37,10 +37,23 @@ export const Normal: Story = {
   args: {
     size: "normal",
   },
+  parameters: {
+    design: {
+      type: "figma",
+      url: "https://www.figma.com/design/ehv3QAHu3JKCcAC46wSh8z/Foundation-File?node-id=50-437&t=zXV3M5qRVXPj8wvQ-4",
+    },
+  },
 };
+
 export const Small: Story = {
   args: {
     size: "small",
+  },
+  parameters: {
+    design: {
+      type: "figma",
+      url: "https://www.figma.com/design/ehv3QAHu3JKCcAC46wSh8z/Foundation-File?node-id=50-437&t=zXV3M5qRVXPj8wvQ-4",
+    },
   },
 };
 
@@ -48,16 +61,34 @@ export const Caption: Story = {
   args: {
     size: "caption",
   },
+  parameters: {
+    design: {
+      type: "figma",
+      url: "https://www.figma.com/design/ehv3QAHu3JKCcAC46wSh8z/Foundation-File?node-id=50-431&t=zXV3M5qRVXPj8wvQ-4",
+    },
+  },
 };
 
 export const Bold: Story = {
   args: {
     weight: "bold",
   },
+  parameters: {
+    design: {
+      type: "figma",
+      url: "https://www.figma.com/design/ehv3QAHu3JKCcAC46wSh8z/Foundation-File?node-id=50-436&t=zXV3M5qRVXPj8wvQ-4",
+    },
+  },
 };
 
 export const Link: Story = {
   args: {
     link: true,
+  },
+  parameters: {
+    design: {
+      type: "figma",
+      url: "https://www.figma.com/design/ehv3QAHu3JKCcAC46wSh8z/Foundation-File?node-id=50-435&t=zXV3M5qRVXPj8wvQ-4",
+    },
   },
 };
