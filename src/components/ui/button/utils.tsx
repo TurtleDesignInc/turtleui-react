@@ -4,7 +4,7 @@ export const buttonVariants = cva(
   `group inline-flex items-center justify-center gap-button
   w-fit min-h-56 px-button-horizontal py-button-vertical rounded-button
   text-20 ring-offset-background transition-colors
-  disabled:pointer-events-none
+  disabled:pointer-events-none disabled:text-button-disabled-text
   focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2`,
   {
     variants: {
@@ -19,6 +19,10 @@ export const buttonVariants = cva(
           disabled:bg-button-secondary-disabled-bg-fill`,
         outline: "border",
         link: "min-h-min px-0 py-0 border-none text-16 leading-28 underline underline-offset-2",
+      },
+      loading: {
+        true: "pointer-events-none",
+        false: "",
       },
     },
     defaultVariants: {
