@@ -81,6 +81,12 @@
   --values-72-rem: 4.5rem;
   --values-78: 78px;
   --values-78-rem: 4.875rem;
+  --values-100: 100px;
+  --values-100-rem: 6.25rem;
+  --values-120: 120px;
+  --values-120-rem: 7.5rem;
+  --values-150: 150px;
+  --values-150-rem: 9.375rem;
 
   /* TYPOGRAPHY */
   --body-desktop: var(--font-family-inter);
