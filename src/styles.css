@@ -156,9 +156,12 @@
   --button-secondary-disabled-bg-fill: var(--color-neutrals-200);
   --button-secondary-text: var(--color-neutrals-0);
   --button-primary-icon: var(--color-neutrals-0);
+
+  --background: var(--color-neutrals-0);
+  --foreground: var(--color-neutrals-900);
 }
 
-.dark {
+[data-theme="dark"] {
   /* SEMANTICS */
   --button-primary-default-bg-fill: var(--color-blue-500);
   --button-primary-hover-bg-fill: var(--color-blue-600);
@@ -176,41 +179,9 @@
   --button-secondary-disabled-bg-fill: var(--color-neutrals-200);
   --button-secondary-text: var(--color-neutrals-1000);
   --button-primary-icon: var(--color-neutrals-0);
-}
 
-:root {
-  /* Shadcn */
-
-  --background: var(--white);
-  --foreground: var(--black);
-
-  --muted: 210 40% 96.1%;
-  --muted-foreground: 215.4 16.3% 46.9%;
-
-  --popover: 0 0% 100%;
-  --popover-foreground: 222.2 84% 4.9%;
-
-  --card: 0 0% 100%;
-  --card-foreground: 222.2 84% 4.9%;
-
-  --border: var(--black);
-  --input: var(--black);
-
-  --primary: 222.2 47.4% 11.2%;
-  --primary-foreground: 210 40% 98%;
-
-  --secondary: 210 40% 96.1%;
-  --secondary-foreground: 222.2 47.4% 11.2%;
-
-  --accent: var(--grey-lighter);
-  --accent-foreground: 222.2 47.4% 11.2%;
-
-  --destructive: 0 84.2% 60.2%;
-  --destructive-foreground: 210 40% 98%;
-
-  --ring: var(--turtle-blue-light);
-
-  --radius: 0.5rem;
+  --background: var(--color-neutrals-900);
+  --foreground: var(--color-neutrals-0);
 }
 
 @layer base {
@@ -232,20 +203,7 @@
   }
 }
 
-@layer components {
-  * {
-    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2;
-  }
-
-  .container {
-    @apply max-w-full md:max-w-full lg:max-w-full;
-  }
-
-  .link {
-    @apply text-turtle-blue underline underline-offset-2 hover:text-turtle-blue-dark active:text-black;
-  }
-
-  /* .card:-webkit-scrollbar: {
-    width: 0;
-  } */
+.sb-main-centered,
+.sb-show-main {
+  @apply bg-background text-foreground;
 }

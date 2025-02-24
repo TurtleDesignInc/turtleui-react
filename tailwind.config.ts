@@ -74,6 +74,9 @@ const config: Config = {
       "10": "var(--values-10-rem)",
     },
     colors: {
+      transparent: "transparent",
+      background: "var(--background)",
+      foreground: "var(--foreground)",
       button: {
         primary: {
           text: "var(--button-primary-text)",
@@ -111,55 +114,6 @@ const config: Config = {
           text: "var(--button-disabled-text)",
         },
       },
-
-      transparent: "transparent",
-      black: "var(--color-neutrals-1000)",
-      white: "hsl(var(--white))",
-      foreground: "hsl(var(--black))",
-      background: "hsl(var(--white))",
-      tan: "hsl(var(--tan))",
-      grey: {
-        lighter: "hsl(var(--grey-lighter))",
-        light: "hsl(var(--grey-light))",
-        DEFAULT: "hsl(var(--grey))",
-      },
-      turtle: {
-        blue: {
-          light: "hsl(var(--turtle-blue-light))",
-          DEFAULT: "hsl(var(--turtle-blue))",
-          dark: "hsl(var(--turtle-blue-dark))",
-        },
-      },
-      red: {
-        light: "hsl(var(--red-light))",
-        DEFAULT: "hsl(var(--red))",
-      },
-      green: {
-        light: "hsl(var(--green-light))",
-        DEFAULT: "hsl(var(--green))",
-      },
-      yellow: {
-        light: "hsl(var(--yellow-light))",
-        DEFAULT: "hsl(var(--yellow))",
-      },
-      purple: {
-        light: "hsl(var(--purple-light))",
-        DEFAULT: "hsl(var(--purple))",
-      },
-      teal: {
-        light: "hsl(var(--teal-light))",
-        DEFAULT: "hsl(var(--teal))",
-      },
-      custom: {
-        blue: "hsl(var(--custom-blue))",
-        yellow: "hsl(var(--custom-yellow))",
-        teal: "hsl(var(--custom-teal))",
-      },
-      accent: "hsl(var(--accent))",
-      popover: "hsl(var(--popover))",
-      border: "hsl(var(--border))",
-      input: "hsl(var(--input))",
-      ring: "hsl(var(--ring))",
     },
     extend: {
       spacing: {
