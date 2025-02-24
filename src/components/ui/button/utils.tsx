@@ -17,7 +17,7 @@ export const buttonVariants = cva(
           hover:bg-button-secondary-hover-bg-fill
           active:bg-button-secondary-pressed-bg-fill
           disabled:bg-button-secondary-disabled-bg-fill`,
-        outline: "border",
+        outline: "border-2 border-button-primary-default-bg-fill",
         link: "min-h-min px-0 py-0 border-none leading-28 underline underline-offset-2",
       },
       loading: {
