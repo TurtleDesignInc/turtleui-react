@@ -10,6 +10,10 @@ const meta = {
       control: "radio",
       options: ["normal", "bold"],
     },
+    size: {
+      control: "radio",
+      options: ["normal", "small", "caption"],
+    },
     link: {
       control: "boolean",
     },
@@ -19,6 +23,7 @@ const meta = {
   },
   args: {
     weight: "normal",
+    size: "normal",
     link: false,
     children:
       "The time is now for it to be okay to be great. People in this world shun people for being great. For being a bright color. For standing out. ",
